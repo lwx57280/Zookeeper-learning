@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * zookeeper API 调用
+ * zookeeper  调用API 创建节点、修改节点、删除节点
  *
  */
 public class ConnectionMemo {
