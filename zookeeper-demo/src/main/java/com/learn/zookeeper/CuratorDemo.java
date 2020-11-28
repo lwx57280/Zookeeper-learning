@@ -6,6 +6,9 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
 
+/**
+ * Curator的操作
+ */
 public class CuratorDemo {
 
     public static void main(String[] args) throws Exception {
@@ -30,7 +33,9 @@ public class CuratorDemo {
         // 删除节点
         //curatorFramework.delete().deletingChildrenIfNeeded().forPath("/api/node1");
 
-        //
+        /**
+         *
+         */
         Stat stat = new Stat();
         curatorFramework.getData().storingStatIn(stat).forPath("/api/node1");
         curatorFramework.setData().withVersion(stat.getVersion()).forPath("/api/node1", "xx123".getBytes());
